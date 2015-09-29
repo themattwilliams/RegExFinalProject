@@ -31,6 +31,18 @@
 	width: 40%;
 	font-size: 2em;
 }
+
+.login-bar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.box {
+ 	max-width: 50%;
+ 	text-align: center;
+}
+
 div.c1 {
 	display: flex;
 	background: #127C22;

@@ -18,17 +18,6 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
     });
    }; // END FUNCTION
 
-  // $scope.anonLogin = function () {
-  //  ref.authAnonymously(function(error, authData) {
-  //    if (error) {
-  //      console.log("Login Failed!", error);
-  //    } else {
-  //      console.log("Authenticated successfully with payload:", authData);
-  //    } 
-  //   }, {
-  //     remember: "sessionOnly"
-  //   });
-  // }
 
    $scope.githubLogOut = function () {
       ref.unauth();
@@ -36,6 +25,16 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
       AuthId.uid = null
       ChangeCompletedToTrueOrFalse(false) 
    }; // END FUNCTION
+
+   $scope.googleLogin = function () {
+    ref.authWithOAuthPopup("google", function(error, authData) {
+      if (error) {
+        console.log("Login Failed!", error);
+      } else {
+        console.log("Authenticated successfully with payload:", authData);
+      }
+    });
+   }
 
    function authDataCallback(authData) {
     console.log(authData,"*********AUTHDATA**********");
@@ -278,6 +277,10 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
       }, function() {
         $('#sign-in').css("color","#CC4B09")
       });
+
+      // $('#sign-in').click(function(event) {
+      //   $('#modal2').openModal();
+      // });
 
       $('#sign-out').hover(function() {
          console.log(this)
