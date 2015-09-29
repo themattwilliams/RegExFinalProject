@@ -1,19 +1,15 @@
-
-  <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Modal</a>
-
   <!-- Modal Structure -->
-  <div id="modal2" class="modal bottom-sheet">
+  <div id="modal2" class="modal bottom-sheet scroll-bar">
     <div class="modal-content login-bar">
       <div class="box">
 <!--         <h4>Modal Header</h4>
         <p>A bunch of text</p> -->
         <div>
-          <div>
-            <h3>Login To Track Your Puzzles!</h3>
+          <div id="bottom-bar" class="animated jello">
+            <h5>Login To Track Your Puzzles!</h5>
             <div class="box">
-              <img src="../images/google-icon.png" alt="" ng-click="googleLogin()" height="75px">
-              <img src="../images/github-icon.png" alt="" ng-click="githubLogin()" height="75px">
+              <img src="../images/google-icon.png" alt="" ng-click="googleLogin()" height="75px" class="hvr-grow">
+              <img src="../images/github-icon.png" alt="" ng-click="githubLogin()" height="75px" class="hvr-grow">
             </div>
           </div>
         </div>
@@ -79,6 +75,4 @@
 	<div class="c6 hide z-depth-3" ng-click="tryAgain()">Press Enter to try again!</div>
 	<div class="c7 hide z-depth-3" ng-click="nextPuzzle()">Next Puzzle</div>
 </div>
-
-
 
