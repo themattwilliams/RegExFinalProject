@@ -1,18 +1,34 @@
+
 app.controller('RegExController', ["$scope", "$location", "$routeParams", "$route", "$timeout", "learningMode", "gameMode", "$firebaseObject", "AuthId", function($scope, $location, $routeParams, $route, $timeout, learningMode, gameMode, $firebaseObject, AuthId){
    var ref = new Firebase("https://radiant-torch-6315.firebaseio.com/");
-   var syncObject = $firebaseObject(ref);
+   var syncObject = {};
+   // var syncObject = $firebaseObject(ref);
    var arr = [];
    $scope.AuthId = AuthId.uid;
 
    $scope.githubLogin = function () {
-      ref.authWithOAuthRedirect("github", function(error) {
-        if (error) {
-          console.log("Login Failed!", error);
-        } else {
-          // We'll never get here, as the page will redirect on success.
-        } // END IF
-      });
+    ref.authWithOAuthPopup("github", function(error, authData) {
+      if (error) {
+        console.log("Login Failed!", error);
+      } else {
+        console.log("Authenticated successfully with payload:", authData);
+        console.log(authData.uid, "HERE")
+        // syncObject = $firebaseObject(ref.child(authData.uid))
+      }
+    });
    }; // END FUNCTION
+
+  // $scope.anonLogin = function () {
+  //  ref.authAnonymously(function(error, authData) {
+  //    if (error) {
+  //      console.log("Login Failed!", error);
+  //    } else {
+  //      console.log("Authenticated successfully with payload:", authData);
+  //    } 
+  //   }, {
+  //     remember: "sessionOnly"
+  //   });
+  // }
 
    $scope.githubLogOut = function () {
       ref.unauth();
@@ -22,13 +38,18 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
    }; // END FUNCTION
 
    function authDataCallback(authData) {
+    console.log(authData,"*********AUTHDATA**********");
+
       if (authData) {
          AuthId.set(authData.uid) 
          console.log("User " + authData.uid + " is logged in with " + authData.provider);
+         console.log(ref,"*********REF**********");
+
+         syncObject = $firebaseObject(ref.child(authData.uid))
          syncObject.$loaded().then(function() {
             if (!syncObject[authData.uid]) {
-               syncObject[authData.uid] = [0];
-               syncObject.$save();     
+               syncObject[authData.uid] = [authData.uid];
+               // syncObject.$save();     
             } // END IF
             authLoaded(authData);
          })
