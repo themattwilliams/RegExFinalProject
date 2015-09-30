@@ -21,6 +21,8 @@
 	-webkit-box-shadow: 11px 10px 28px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 11px 10px 28px 0px rgba(0,0,0,0.75);
 	box-shadow: 11px 10px 28px 0px rgba(0,0,0,0.75);
+/*	font-size: 8px;
+	font-family: 'Press Start 2P', cursive;*/
 }
 
 
@@ -61,7 +63,9 @@
 div.c1 {
 	display: flex;
 	background: #127C22;
-	font-family: 'Bangers', cursive;
+	/*font-family: 'Bangers', cursive;*/
+	font-family: 'Press Start 2P', cursive;
+	font-size: .5em;
 	width: 100%;
 	justify-content: space-around;
 	/*border-radius: 25px;*/
@@ -69,8 +73,8 @@ div.c1 {
 	border-top-left-radius: 25px;
 	border-top-right-radius: 25px;
 	/*border-top-left-radius: 2em 0.5em;*/
-	color: white;
-	text-shadow:2px 2px 4px black;
+	color: black;
+	text-shadow:2px 2px 4px white;
 }
 
 span.r1 {
@@ -82,7 +86,7 @@ span.r1 {
 	flex-grow: 2;
 	text-align: center;
 	margin-left: 17%;
-	font-size: 1.5em;
+	font-size: 1.75em;
 
 
 }
@@ -98,7 +102,9 @@ span.r2 {
 	background-color: #FFBAAA;
 	padding: 10px;
 	max-width: 800px;
-	font-weight: bold;
+	font-size: 32px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: bolder;
 }
 
 .c3 {
