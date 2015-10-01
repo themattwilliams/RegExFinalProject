@@ -204,6 +204,7 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
           $(".container").css("font-size", "2em")
           if ($location.$$path === "/allPuzzles") {
              $(".all-puzzles").css("font-size", "2em")
+             $(".all-puzzles").css("margin-left", "35%")
           } // END IF
        } // END IF
      }() // END FUNCTION
@@ -259,6 +260,7 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
             $(".container").css("font-size", "2em")
             if ($location.$$path === "/allPuzzles") {
                $(".all-puzzles").css("font-size", "2em")
+               $(".all-puzzles").css("margin-left", "35%")
             }  // END IF
          } // END IF
       });  
