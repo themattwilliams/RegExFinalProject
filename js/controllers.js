@@ -17,6 +17,7 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
       }
     });
     $('#modal2').closeModal();
+    $('.tooltipped').tooltip({delay: 50});
    }; // END FUNCTION
 
    $scope.githubLogOut = function () {
@@ -35,6 +36,7 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
       }
     });
     $('#modal2').closeModal();
+    $('.tooltipped').tooltip({delay: 50});
    }
 
    $scope.twitterLogin = function () {
@@ -46,6 +48,7 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
       }
     });
     $('#modal2').closeModal();
+    $('.tooltipped').tooltip({delay: 50});
    }
 
    $scope.facebookLogin = function () {
@@ -57,6 +60,7 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
       }
     });
     $('#modal2').closeModal();
+    $('.tooltipped').tooltip({delay: 50});
    }
 
    $scope.loginMessage = function () {
@@ -106,6 +110,8 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
 
    $scope.changeView = function (view) {
       $location.path(view)
+      $('.tooltipped').tooltip('remove');
+      $('.tooltipped').tooltip({delay: 50});
    } // END FUNCTION
 
 
@@ -122,6 +128,7 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
    $scope.nextPuzzle = function () {
       $('.container').removeClass('shake')
       $('.container').addClass('fadeOutLeft')
+      $('.tooltipped').tooltip({delay: 50});
       
       $timeout(function(){
          var next = parseInt($routeParams.id) + 1
@@ -266,6 +273,7 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
 
    $scope.hoverExit = function(){
        this.hoverOn = false;
+       $('.tooltipped').tooltip('remove');
    }; // END FUNCTION
 
    var navHover = function () {
