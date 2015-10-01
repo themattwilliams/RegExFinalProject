@@ -6,10 +6,12 @@
         <p>A bunch of text</p> -->
         <div>
           <div id="bottom-bar" class="animated jello">
-            <h5>Login To Track Your Puzzles!</h5>
+            <!-- <h5>Login To Track Your Puzzles!</h5> -->
             <div class="box">
               <img src="../images/google-icon.png" alt="" ng-click="googleLogin()" height="75px" class="hvr-grow">
               <img src="../images/github-icon.png" alt="" ng-click="githubLogin()" height="75px" class="hvr-grow">
+              <img src="../images/twitter-icon.png" alt="" ng-click="twitterLogin()" height="75px" class="hvr-grow">
+              <img src="../images/facebook-icon.png" alt="" ng-click="facebookLogin()" height="75px" class="hvr-grow">
             </div>
           </div>
         </div>
@@ -35,18 +37,16 @@
     <div class="modal-footer">
       <a ng-href="#{{puzzle.id}}" class="modal-action modal-close waves-effect waves-green btn-flat ">Let Me Play!!</a>
     </div>
-  </div>
-
+  </div> 
   <div class="flex-menu-container">
-
     <div class="flex-menu" ng-mouseenter="hoverEnter()" ng-mouseleave="hoverExit()">
       <span>
-        <i ng-show="hoverOn" class="fa fa-sign-in fa-4x animate-show modal-trigger" href="#modal2" id="sign-in"></i>
-        <i ng-show="hoverOn" class="fa fa-home fa-4x animate-show" id="home"></i>
-        <i ng-show="hoverOn" class="fa fa-question-circle fa-4x animate-show modal-trigger" id="question" href="#modal1"></i>
-        <i ng-show="hoverOn" class="fa fa-gamepad fa-4x animate-show" id="gamepad" ng-click="changeView(1001)"></i>
-        <i ng-show="hoverOn" class="fa fa-graduation-cap fa-4x animate-show" id="learn" ng-click="changeView(1)"></i>
-        <i ng-show="hoverOn" class="fa fa-sign-out fa-4x animate-show" id="sign-out" ng-click="githubLogOut()"></i>
+        <i ng-show="hoverOn" data-position="bottom" data-delay="50" data-tooltip="Sign In" class="tooltipped fa fa-sign-in fa-4x animate-show modal-trigger" href="#modal2" id="sign-in" ng-click="loginMessage()"></i>
+        <i ng-show="hoverOn" data-position="bottom" data-delay="50" data-tooltip="All Puzzles" class="tooltipped fa fa-home fa-4x animate-show" id="home"></i>
+        <i ng-show="hoverOn" data-position="bottom" data-delay="50" data-tooltip="Help" class="tooltipped fa fa-question-circle fa-4x animate-show modal-trigger" id="question" href="#modal1"></i>
+        <i ng-show="hoverOn" data-position="bottom" data-delay="50" data-tooltip="Game Mode" class="tooltipped fa fa-gamepad fa-4x animate-show" id="gamepad" ng-click="changeView(1001)"></i>
+        <i ng-show="hoverOn" data-position="bottom" data-delay="50" data-tooltip="Learn Regex!" class="tooltipped fa fa-graduation-cap fa-4x animate-show" id="learn" ng-click="changeView(1)"></i>
+        <i ng-show="hoverOn" data-position="bottom" data-delay="50" data-tooltip="Sign Out" class="tooltipped fa fa-sign-out fa-4x animate-show" id="sign-out" ng-click="githubLogOut()"></i>
       </span>
       <span id="hamburger">
         <i class="fa fa-bars fa-4x"></i>

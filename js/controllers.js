@@ -16,8 +16,8 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
         // syncObject = $firebaseObject(ref.child(authData.uid))
       }
     });
+    $('#modal2').closeModal();
    }; // END FUNCTION
-
 
    $scope.githubLogOut = function () {
       ref.unauth();
@@ -34,6 +34,34 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
         console.log("Authenticated successfully with payload:", authData);
       }
     });
+    $('#modal2').closeModal();
+   }
+
+   $scope.twitterLogin = function () {
+    ref.authWithOAuthPopup("twitter", function(error, authData) {
+      if (error) {
+        console.log("Login Failed!", error);
+      } else {
+        console.log("Authenticated successfully with payload:", authData);
+      }
+    });
+    $('#modal2').closeModal();
+   }
+
+   $scope.facebookLogin = function () {
+    ref.authWithOAuthPopup("facebook", function(error, authData) {
+      if (error) {
+        console.log("Login Failed!", error);
+      } else {
+        console.log("Authenticated successfully with payload:", authData);
+      }
+    });
+    $('#modal2').closeModal();
+   }
+
+   $scope.loginMessage = function () {
+      // Materialize.toast(message, displayLength, className, completeCallback);
+  Materialize.toast('Login to Track Your Progess!', 4000) // 4000 is the duration of the toast
    }
 
    function authDataCallback(authData) {
@@ -386,6 +414,7 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
 
    $(document).ready(function(){
        animateDiv();   
+       $('.tooltipped').tooltip({delay: 50});
    });
 
    function makeNewPosition(){      

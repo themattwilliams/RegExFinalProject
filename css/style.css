@@ -56,9 +56,14 @@
 }
 
 .box {
- 	max-width: 50%;
+ 	max-width: 100%;
  	text-align: center;
 }
+
+/*.bottom-bar {
+ 	max-width: 50%;
+ 	text-align: center;
+}*/
 
 div.c1 {
 	display: flex;
