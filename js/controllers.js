@@ -267,6 +267,7 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
  // MENU ********************************
 
    $scope.hoverEnter = function(){
+    $('.tooltipped').tooltip({delay: 50});
        this.hoverOn = true;
        navHover(); 
    }; // END FUNCTION
