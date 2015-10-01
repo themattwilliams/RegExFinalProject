@@ -2,11 +2,8 @@
   <div id="modal2" class="modal bottom-sheet scroll-bar">
     <div class="modal-content login-bar">
       <div class="box">
-<!--         <h4>Modal Header</h4>
-        <p>A bunch of text</p> -->
         <div>
           <div id="bottom-bar" class="animated jello">
-            <!-- <h5>Login To Track Your Puzzles!</h5> -->
             <div class="box">
               <img src="../images/google-icon.png" alt="" ng-click="googleLogin()" height="75px" class="hvr-grow">
               <img src="../images/github-icon.png" alt="" ng-click="githubLogin()" height="75px" class="hvr-grow">
@@ -38,6 +35,8 @@
       <a ng-href="#{{puzzle.id}}" class="modal-action modal-close waves-effect waves-green btn-flat ">Let Me Play!!</a>
     </div>
   </div> 
+
+  <!-- Menu Structure  -->
   <div class="flex-menu-container">
     <div class="flex-menu" ng-mouseenter="hoverEnter()" ng-mouseleave="hoverExit()">
       <span>
@@ -54,9 +53,7 @@
     </div>
   </div>
 
-
-
-<!-- <div ng-bind-html="my_html | to_trusted"></div> -->
+<!-- Game Structure -->
 <div class="container animated fadeInRight" ng-keypress="keypressAction()">
 	<div class="c1">
 		<span class="r1">{{puzzle.title}} </i></span>
@@ -65,7 +62,7 @@
 	<div class="c2" ng-bind-html="puzzle.description | to_trusted"></div>
 	<div class="c3 angular-with-newlines" style="color:blue;">{{puzzle.stringToSearch}}</div>
 	<div class="c4 z-depth-3">
-		<form id="gameForm" ng-submit='regexConverter(input, puzzle.stringToSearch, puzzle.regEx) '>
+		<form id="gameForm" ng-submit='regexConverter(input, puzzle.stringToSearch, puzzle.regEx)'>
 			/<input ng-model="input.guess" id="guess" focus-me="input.guess">/
 			<input ng-model="input.flags" style="width: 40px;">
 			<input type="submit" id="submit" style="position: absolute; left: -9999px"/>
