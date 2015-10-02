@@ -680,5 +680,19 @@ position:fixed;
   }
 }
 
+#table-header-left {
+	background-color: darkGreen;
+	border-top-left-radius: 10px;
+}
+
+#table-header-right {
+	background-color: darkGreen;
+	border-top-right-radius: 10px;
+}
+
+#table-header {
+	background-color: darkGreen;
+}
+
 
 
