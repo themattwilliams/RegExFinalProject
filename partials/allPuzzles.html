@@ -46,23 +46,25 @@
 </div>
 
 <!-- Puzzles Table -->
-<div class="all-puzzles">
-  <table class="table table-hover">
-      <thead class="table-data">
-        <tr>
-          <th id="table-header-left">Puzzle</th>
-          <th id="table-header">Difficulty</th>
-          <th id="table-header-right">Completed</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr ng-repeat="puzzle in learningMode" ng-click="changeView(puzzle.id)">
-          <td class="animated fadeIn">{{puzzle.title}}</td>
-          <td class="animated fadeIn">{{puzzle.difficulty}}</td>
-          <td class="animated fadeIn" ng-show="puzzle.completed"><i class="fa fa-check"></i></td>
-          <td class="animated fadeIn" ng-show="!puzzle.completed"></td>
-        </tr>
+<div id="puzzle-holder">
+  <div class="all-puzzles">
+    <table class="table table-hover">
+        <thead class="table-data">
+          <tr>
+            <th id="table-header-left">Puzzle</th>
+            <th id="table-header">Difficulty</th>
+            <th id="table-header-right">Completed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="puzzle in learningMode" ng-click="changeView(puzzle.id)">
+            <td class="animated fadeIn">{{puzzle.title}}</td>
+            <td class="animated fadeIn">{{puzzle.difficulty}}</td>
+            <td class="animated fadeIn" ng-show="puzzle.completed"><i class="fa fa-check"></i></td>
+            <td class="animated fadeIn" ng-show="!puzzle.completed"></td>
+          </tr>
 
-      </tbody>
+        </tbody>
     </table>
   </div>
+</div>

@@ -79,7 +79,8 @@ svg {
 	display: flex;
 	flex-direction: column;
 	max-width: 800px;
-	margin-top: 5px;
+	max-height: 700px;
+	margin-top: 50px;
 	z-index: 3;
 	vertical-align: center;
 	text-align: center;
@@ -98,8 +99,11 @@ svg {
 	-webkit-box-shadow: 11px 10px 28px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 11px 10px 28px 0px rgba(0,0,0,0.75);
 	box-shadow: 11px 10px 28px 0px rgba(0,0,0,0.75);
-/*	font-size: 8px;
-	font-family: 'Press Start 2P', cursive;*/
+	 top: 0;
+	 bottom: 0;
+	 left: 0;
+	 right: -15px; /* Decrease this value for cross-browser compatibility */
+	 overflow: auto;
 }
 
 
@@ -693,6 +697,14 @@ position:fixed;
 #table-header {
 	background-color: darkGreen;
 }
+
+#table-holder {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
 
 
 
