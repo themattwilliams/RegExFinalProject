@@ -76,10 +76,11 @@ svg {
 /*end splash logo*/
 
 .all-puzzles {
+	font-size: 1.5vw;
 	display: flex;
 	flex-direction: column;
 	max-width: 800px;
-	max-height: 700px;
+	max-height: 400px;
 	margin-top: 50px;
 	z-index: 3;
 	vertical-align: center;

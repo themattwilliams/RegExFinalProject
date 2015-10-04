@@ -109,6 +109,8 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
    ref.onAuth(authDataCallback);
 
    $scope.changeView = function (view) {
+      console.log($location)
+      if (true) {};
       $location.path(view)
       $('.tooltipped').tooltip('remove');
       $('.tooltipped').tooltip({delay: 50});
@@ -171,7 +173,7 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
           $(".container").css("margin-right", "20%")
           $(".container").css("font-size", "1.2em")
           if ($location.$$path === "/allPuzzles") {
-             $(".all-puzzles").css("font-size", "1em")
+             // $(".all-puzzles").css("font-size", "1em")
           } // END IF
        } else if ($( window ).width() > 800 && $( window ).width() < 1600) {
           $(".container").css("width", "50%")
@@ -179,7 +181,7 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
           $(".container").css("margin-right", "25%")
           $(".container").css("font-size", "1.5em")
           if ($location.$$path === "/allPuzzles") {
-             $(".all-puzzles").css("font-size", "1.2em")
+             // $(".all-puzzles").css("font-size", "1.2em")
           } // END IF
        } else if ($( window ).width() > 1600 && $( window ).width() < 1800) {
           $(".container").css("width", "50%")
@@ -187,7 +189,7 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
           $(".container").css("margin-right", "25%")
           $(".container").css("font-size", "2em")
           if ($location.$$path === "/allPuzzles") {
-             $(".all-puzzles").css("font-size", "2em")
+             // $(".all-puzzles").css("font-size", "2em")
           } // END IF
       } else if ($( window ).width() > 1800 && $( window ).width() < 1950) {
           $(".container").css("width", "50%")
@@ -195,7 +197,7 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
           $(".container").css("margin-right", "30%")
           $(".container").css("font-size", "2em")
           if ($location.$$path === "/allPuzzles") {
-             $(".all-puzzles").css("font-size", "2em")
+             // $(".all-puzzles").css("font-size", "2em")
           } // END IF
        } else if ($( window ).width() > 1950 ) {
           $(".container").css("width", "50%")
@@ -203,7 +205,7 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
           $(".container").css("margin-right", "35%")
           $(".container").css("font-size", "2em")
           if ($location.$$path === "/allPuzzles") {
-             $(".all-puzzles").css("font-size", "2em")
+             // $(".all-puzzles").css("font-size", "2em")
              $(".all-puzzles").css("margin-left", "35%")
           } // END IF
        } // END IF
@@ -219,7 +221,7 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
             $(".container").css("margin-right", "0%")
             $(".container").css("font-size", "1.2em")
             if ($location.$$path === "/allPuzzles") {
-               $(".all-puzzles").css("font-size", "1em")
+               // $(".all-puzzles").css("font-size", "1em")
             } // END IF
          } else if ($( window ).width() < 800 && $( window ).width() > 402) {
             $(".container").css("width", "60%")
@@ -227,7 +229,7 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
             $(".container").css("margin-right", "20%")
             $(".container").css("font-size", "1.2em")
             if ($location.$$path === "/allPuzzles") {
-               $(".all-puzzles").css("font-size", "1em")
+               // $(".all-puzzles").css("font-size", "1em")
             }  // END IF
          } else if ($( window ).width() > 800 && $( window ).width() < 1600) {
             $(".container").css("width", "50%")
@@ -235,7 +237,7 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
             $(".container").css("margin-right", "25%")
             $(".container").css("font-size", "1.5em")
             if ($location.$$path === "/allPuzzles") {
-               $(".all-puzzles").css("font-size", "1.2em")
+               // $(".all-puzzles").css("font-size", "1.2em")
             }  // END IF
          } else if ($( window ).width() > 1600 && $( window ).width() < 1800) {
             $(".container").css("width", "50%")
@@ -243,7 +245,7 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
             $(".container").css("margin-right", "25%")
             $(".container").css("font-size", "2em")
             if ($location.$$path === "/allPuzzles") {
-               $(".all-puzzles").css("font-size", "2em")
+               // $(".all-puzzles").css("font-size", "2em")
             } // END IF
         } else if ($( window ).width() > 1800 && $( window ).width() < 1950) {
             $(".container").css("width", "50%")
@@ -251,7 +253,7 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
             $(".container").css("margin-right", "30%")
             $(".container").css("font-size", "2em")
             if ($location.$$path === "/allPuzzles") {
-               $(".all-puzzles").css("font-size", "2em")
+               // $(".all-puzzles").css("font-size", "2em")
             }  // END IF
          } else if ($( window ).width() > 1950 ) {
             $(".container").css("width", "50%")
@@ -259,7 +261,7 @@ app.controller('RegExController', ["$scope", "$location", "$routeParams", "$rout
             $(".container").css("margin-right", "35%")
             $(".container").css("font-size", "2em")
             if ($location.$$path === "/allPuzzles") {
-               $(".all-puzzles").css("font-size", "2em")
+               // $(".all-puzzles").css("font-size", "2em")
                $(".all-puzzles").css("margin-left", "35%")
             }  // END IF
          } // END IF
